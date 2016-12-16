@@ -1,0 +1,74 @@
+<div class="form-wrappor">
+<%= form_for @info, html: { class: 'form-horizontal', multipart: true } do |f|%>
+    <center>
+	<div class="col-md-8 col-md-offset-2">
+              <div class="header-text">
+                  <h2>Enter Your Details</h2>
+                  <hr />
+              </div>
+          </div>
+	<div class="form-group">
+		<div class="col-span-3">
+	    	FirstName*
+	    </div>
+	    <div class="col-span-9">
+	    	<%= f.text_field :f_name, placeholder: 'Enter Your First name', require: true%>
+	    </div>
+	</div>
+	<div class="form-group">
+		<div class="col-span-3">
+	    	LastName*
+	    </div>
+	    <div class="col-span-9">
+	    	<%= f.text_field :l_name, placeholder: 'Enter Your Last Name', require: true%>
+	    </div>
+	</div> 
+	<div class="form-group">
+		<div class="col-span-3">
+	    	DOB*
+	    </div>
+	    <div class="col-span-9" id="calendar">
+	    	<%= f.date_field :dob, placeholder: 'Enter Your DOB', require: true%>
+	    </div>
+	</div> 
+	
+	<div class="form-group">
+		<div class="col-span-3">
+	    	Country*
+	    </div>
+	    <div class="col-span-9">
+               <%= f.text_field :country, priority: ["GB", "US"] %>
+	    </div>
+	</div>
+	<div class="form-group">
+		<div class="col-span-3">
+	    	State*
+	    </div>
+	    <div class="col-span-9">
+           <%= f.text_field :state%>
+        </div>
+	</div>
+	<div class="form-group">
+		<div class="col-span-3">
+	    	Distric*
+	    </div>
+	    <div class="col-span-9">
+	    	<%= f.text_field :distric %>
+	    </div>
+	</div>
+	<div class="form-group">
+		<div class="col-span-3">
+	    	Zip Code
+	    </div>
+	    <div class="col-span-9">
+	    	<%= f.text_field :zip_code %>
+	    </div>
+	</div>
+	<div class="footer-head-text">
+  		<%= f.button :submit, class: 'btn btn-success' %>
+    </div>
+    </center>
+    <% end %>
+    
+
+

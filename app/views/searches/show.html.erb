@@ -1,0 +1,30 @@
+<center>
+<h2> Congratulation !! Your fabulous Person Details</h2>
+<hr />
+
+<% if @search.search_people.empty? %>
+	<p>Sorry!! Your fabulous Person is Not There</p>
+	<% else %>
+	<%  @search.search_people.each do |c| %>
+	<table cellpadding="10" cellspacing="10" border="2" bgcolor="lightblue">
+		<tr>
+			<th>Name</th>
+			<th>DOB</th>
+			<th>Country</th>
+			<th>State</th>
+			<th>Distric</th>
+			<th>Zip Code</th>
+		</tr>
+		<tr>
+	        <td><%= c.f_name %>&nbsp;<%= c.l_name%></td>
+			<td><%= c.dob%></td>
+			<td><%= c.country%></td>
+			<td><%= c.state%></td>
+			<td><%= c.distric%></td>
+			<td><%= c.zip_code%></td>
+		</tr>	
+	</table>
+	<% end %>
+	<% end %>
+	<p><%= link_to "Back", new_search_path%></p>
+	</center>
