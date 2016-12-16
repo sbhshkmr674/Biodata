@@ -1,4 +1,5 @@
 class Info < ActiveRecord::Base
+	has_many :educations
 	validates_presence_of :f_name
 	validates_presence_of :l_name
 	validates_presence_of :dob

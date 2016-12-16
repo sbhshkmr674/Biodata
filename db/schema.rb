@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161215132223) do
+ActiveRecord::Schema.define(version: 20161216102355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "educations", force: :cascade do |t|
+    t.string   "s_name"
+    t.string   "y_passout"
+    t.string   "b_name"
+    t.string   "o_marks"
+    t.string   "division"
+    t.integer  "infos"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "educations", ["infos"], name: "index_educations_on_infos", using: :btree
 
   create_table "infos", force: :cascade do |t|
     t.string   "f_name"

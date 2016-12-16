@@ -1,5 +1,4 @@
 class Search < ActiveRecord::Base
-	
 	def search_people
 		searchs=Info.all
 

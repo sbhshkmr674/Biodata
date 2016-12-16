@@ -1,0 +1,24 @@
+		<center>    
+    <h2> 10th Education Details </h2>
+    <hr /> 
+    <table cellpadding="10" border="5" bgcolor="lightpink">
+              <tr>
+                  <th>Year Of Passout</th>
+                  <th>School Name</th>
+                  <th>Board Name</th>
+                  <th>Obtained Marks</th>
+                  <th>Division</th>
+              </tr>   
+          <% @educations.each do |v| %>
+
+            <tr>
+               <td> <%= v.y_passout %></td>
+                <td><%= v.s_name%></td>                 
+                <td><%= v.b_name %></td>
+                <td><%= v.o_marks%></td>
+                <td><%= v.division%></td>
+            </tr>
+          <% end %>
+    </table>      
+          <%= link_to "New Biodata", new_info_path%>
+          </center>

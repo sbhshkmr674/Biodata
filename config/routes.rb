@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'educations/index'
+
   get '/orders/subregion_options' => 'orders#subregion_options'
   resources :infos
   resources :searches
+  resources :educations
   root 'infos#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

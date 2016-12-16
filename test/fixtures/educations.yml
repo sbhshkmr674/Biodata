@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  s_name: MyString
+  y_passout: MyString
+  b_name: MyString
+  o_marks: MyString
+  division: MyString
+  infos_id: 
+
+two:
+  s_name: MyString
+  y_passout: MyString
+  b_name: MyString
+  o_marks: MyString
+  division: MyString
+  infos_id: 
