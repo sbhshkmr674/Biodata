@@ -1,0 +1,2 @@
+module EsearchesHelper
+end
