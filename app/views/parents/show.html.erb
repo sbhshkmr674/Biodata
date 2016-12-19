@@ -1,0 +1,17 @@
+<center>
+<table cellpadding="4" cellspacing="5" bgcolor="gerua">
+	<tr>
+	   <th>Father Name</th>
+	   <th>Occupation</th>
+	   <th>Salary</th>
+	</tr>
+
+<%= @parents.each do |p|%>
+	<tr>
+		<td><%= p.name %></td>
+		<td><%= p.occupation%></td>
+		<td><%= p.salary %></td>
+	</tr>
+	<% end %>
+    </table>
+</center>		   

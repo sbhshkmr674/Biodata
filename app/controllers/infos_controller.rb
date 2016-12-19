@@ -14,7 +14,7 @@ class InfosController < ApplicationController
 
   	if @info.save
   		flash[:success]="Hi! Your Biodata is saved successfully"
-  		redirect_to @info
+  		redirect_to new_education_path
   	else
   		flash[:alert]="Something is going to wrong"
   		render 'new'

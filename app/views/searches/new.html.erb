@@ -1,14 +1,25 @@
  <center>
+
 <div class="col-md-8 col-md-offset-2">
         <div class="header-text">
              <h2>Enter The Details To Search Your faviorate Person </h2>
              <hr />
+              
         </div>
  </div>
 <div class="form-wrappor">
 <%= form_for @search, html: { class: 'form-horizontal', multipart: true } do |v|%>
-	
-		<div class="col-span-3">
+	    <div class="field">
+    		<%= v.label :autolyse %>
+    		<%= v.label :autolyse, "Information",:value => "true" %>
+    		<%= v.radio_button :autolyse, true, :checked => true %>
+    		<%= v.label :autolyse , "Education",:value => "false" %>
+    		<%= v.radio_button :autolyse, false, :checked => false, :id => "education" %>
+    		<%= v.label :autolyse %>
+    		<%= v.label :autolyse, "Parent",:value => "false" %>
+    		<%= v.radio_button :autolyse, true, :checked => false, :id =>"parent" %>
+  		</div>
+  		<div class="col-span-3">
 	    	FirstName
 	    </div>
 	    <div class="col-span-9">
@@ -62,7 +73,15 @@
   		<%= v.submit "Search", class: 'pure-button pure-button-primary' %>
     </div>
     <% end %>
+    </div>
     </center>
     
 
-
+<script type="text/javascript">
+	$('#parent').on('click', function(){
+		window.location.href="/psearches/new";
+	})
+	$('#education').on('click', function(){
+		window.location.href="/esearches/new";
+	})
+</script>

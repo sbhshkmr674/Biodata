@@ -1,0 +1,25 @@
+<center>
+<h2> Congratulation !! Your Parent Details </h2>
+<hr />
+
+<% if @search.search_parent.empty? %>
+	<p>Sorry!! Your  Parent is Not There</p>
+	<% else %>
+	<%  @search.search_parent.each do |p| %>
+	<table cellpadding="10" cellspacing="10" border="2" bgcolor="lightblue">
+		<tr>
+			<th>Parent Name :</th>
+			<th>Occupation :</th>
+			<th>Salary :</th>
+			
+		</tr>
+		<tr>
+	        <td><%= p.Name %>
+	        <td><%= p.occupation%></td>
+			<td><%= p.salary%></td>
+		</tr>	
+	</table>
+	<% end %>
+	<% end %>
+	<p><%= link_to "Back", new_search_path%></p>
+	</center>

@@ -13,7 +13,7 @@ class EducationsController < ApplicationController
 
    	if @education.save
    		flash[:success]="Your Education is Created!"
-   		redirect_to @education
+   		redirect_to new_parent_path
    	else
    		flash[:alert]="Something happing wrong"
    		render 'new'

@@ -1,0 +1,20 @@
+<div class="form-wrappor">
+<%= form_for @search do |f|%>
+	<div class="field">
+		<%= f.label :name, 'Name'%>
+		<%= f.text_field :name, :placeholder => 'Enter Your Parent Name', require: true%>
+	</div>
+	<br>
+	<div class="field">
+		<%= f.label :occupation, 'Occupation'%>
+		<%= f.text_field :occupation, :placeholder => "Enter Your Parent Occupation", require: true%>	
+	</div><br>
+	<div class="field">
+		<%= f.label :salary, "Salary"%>
+		<%= f.text_field :salary, :placeholder => "Enter Your parent Salary", require: true%>
+	</div><br>
+	<div class="col-md-12">
+		<%= f.submit "Search", class: "btn btn-success"%>
+	</div>
+	<% end %>
+</div>			
