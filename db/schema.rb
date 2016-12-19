@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161216102355) do
+ActiveRecord::Schema.define(version: 20161218042345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 20161216102355) do
   end
 
   add_index "educations", ["infos"], name: "index_educations_on_infos", using: :btree
+
+  create_table "esearches", force: :cascade do |t|
+    t.string   "y_passout"
+    t.string   "s_name"
+    t.string   "b_name"
+    t.string   "o_marks"
+    t.string   "division"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "infos", force: :cascade do |t|
     t.string   "f_name"

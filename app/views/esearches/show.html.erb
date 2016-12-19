@@ -1,0 +1,28 @@
+<center>
+<h2> Congratulation !! Your fabulous Person Education</h2>
+<hr />
+
+<% if @search.search_education.empty? %>
+	<p>Sorry!! Your fabulous Person is Not There</p>
+	<% else %>
+	<%  @search.search_education.each do |c| %>
+	<table cellpadding="10" cellspacing="10" border="2" bgcolor="lightblue">
+		<tr>
+			<th>School Name</th>
+			<th>Year Of Passout</th>
+			<th>Board Name</th>
+			<th>Obtain Marks</th>
+			<th>Division</th>
+		</tr>
+		<tr>
+	        <td><%= c.s_name %>
+	        <td><%= c.y_passout%></td>
+			<td><%= c.b_name%></td>
+			<td><%= c.o_marks%></td>
+			<td><%= c.division%></td>
+		</tr>	
+	</table>
+	<% end %>
+	<% end %>
+	<p><%= link_to "Back", new_esearch_path%></p>
+	</center>

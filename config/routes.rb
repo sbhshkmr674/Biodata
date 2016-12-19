@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'educations/index'
+  get 'esearches/index'
 
+  get 'educations/index'
+  
   get '/orders/subregion_options' => 'orders#subregion_options'
   resources :infos
   resources :searches

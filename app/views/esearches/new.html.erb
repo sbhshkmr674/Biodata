@@ -1,0 +1,52 @@
+ <center>
+<div class="col-md-8 col-md-offset-2">
+        <div class="header-text">
+             <h2>Enter The Details To Search Your faviorate Person </h2>
+             <hr />
+        </div>
+ </div>
+<div class="form-wrappor">
+<%= form_for @search, html: { class: 'form-horizontal', multipart: true } do |v|%>
+	
+		<div class="col-span-3">
+	    	Year of Passout
+	    </div>
+	    <div class="col-span-9">
+	    	<%= v.text_field :y_passout, placeholder: 'Enter Your Year of Passout', require: true%>
+	    </div>
+
+		<div class="col-span-3">
+	    	School Name
+	    </div>
+	    <div class="col-span-9">
+	    	<%= v.text_field :s_name, placeholder: 'Enter Your School', require: true%>
+	    </div>
+	
+		<div class="col-span-3">
+	    	Obtain Marks
+	    </div>
+	    <div class="col-span-9" id="calendar">
+	    	<%= v.text_field :o_marks, placeholder: 'Enter Your Marks', require: true%>
+	    </div>
+	
+		<div class="col-span-3">
+	    	Board Name
+	    </div>
+	    <div class="col-span-9">
+               <%= v.text_field :b_name, require: true %>
+	    </div>
+	
+		<div class="col-span-3">
+	    	Division
+	    </div>
+	    <div class="col-span-9">
+           <%= v.text_field :division, require:true%>
+        </div>
+	<div class="actions">
+  		<%= v.submit "Search", class: 'pure-button pure-button-primary' %>
+    </div>
+    <% end %>
+    </center>
+    
+
+
