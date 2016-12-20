@@ -17,3 +17,14 @@
 //= require_tree .
 $('.datetimepicker').datetimepicker();
 
+$ ->
+  $('select#info_country').change (event) ->
+    select_wrapper = $('#info_state_wrapper')
+
+    $('select', select_wrapper).attr('disabled', true)
+
+    country = $(this).val()
+
+    url = "/infos/subregion_options?parent_region=#{country}"
+    select_wrapper.load(url)
+    

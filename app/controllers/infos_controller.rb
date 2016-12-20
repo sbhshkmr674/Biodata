@@ -29,6 +29,7 @@ class InfosController < ApplicationController
     params[:l_name]
     @infos = Info.where(:l_name => params[:l_name]).first
   end
+  
   private
 
   def info_params
