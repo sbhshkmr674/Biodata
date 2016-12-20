@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+gem 'stripe'
+gem 'country_select'
+gem 'carmen-rails', '~> 1.0.0'
 gem 'ransack'
 gem 'jquery-datetimepicker-rails'
 gem 'countries', :require => 'countries/global'

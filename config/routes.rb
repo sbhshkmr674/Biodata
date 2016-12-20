@@ -1,4 +1,6 @@
 Rails.application.routes.draw do  
+  get 'payments/index'
+
   get '/orders/subregion_options' => 'orders#subregion_options'
   resources :infos
   resources :searches
