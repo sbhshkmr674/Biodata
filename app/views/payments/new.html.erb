@@ -1,0 +1,80 @@
+
+<%= form_for @payment do |f|%>
+	 <div class="field">
+    		
+    		<%= f.label :autolyse, "Debit Card",:value => "true" %>
+    		<%= f.radio_button :autolyse, true, :checked => true %>
+    		<%= f.label :autolyse , "Credit Card",:value => "false" %>
+    		<%= f.radio_button :autolyse, false, :checked => false, :id => "credit" %>
+    		<%= f.label :autolyse, "Internet Banking",:value => "false" %>
+    		<%= f.radio_button :autolyse, true, :checked => false, :id =>"internet" %>
+  		</div>
+  	<div class="debitcardpayment" id="debit_card">	
+	<div class="field">
+	   Debit Card Number*
+	   <%= f.text_field :d_card, placeholder: "Enter the Debit Card Number"%>
+	</div>
+	<div class="field">
+	    Expiry Date
+	    <%= f.text_field :expiry_date, placeholder: 'MM' + 'YYYY'%>
+	</div>
+	<div class="field">
+		CCV Number
+		<%= f.text_field :ccv_no, placeholder: "Enter the CCV Number"%>
+	</div>
+	<div class="field">
+	   Please choose the name of Bank
+	   <%= f.select :bank_name,[['State Bank Of India'],['HDFC Bank'],['ICICI Bank'],['AXIS Bank'],['Punjab National Bank'],['Kotak Bank']], placeholder: "Please Choose a Bank Name OR Other"%>
+	</div>
+	
+	<div class="col-span-12">
+	    <%= f.button "Pay Now", class: "btn btn-green-success"%>
+	</div>
+</div>
+<div class="cardpayment" id="credit_card">
+   <div class="field">
+	   Debit Card Number*
+	   <%= f.text_field :d_card, placeholder: "Enter the Debit Card Number"%>
+	</div>
+	<div class="field">
+	    Expiry Date
+	    <%= f.text_field :expiry_date, placeholder: 'MM' + 'YYYY'%>
+	</div>
+	<div class="field">
+		CCV Number
+		<%= f.text_field :ccv_no, placeholder: "Enter the CCV Number"%>
+	</div>
+	<div class="field">
+	   Please choose the name of Bank
+	   <%= f.select :bank_name,[['State Bank Of India'],['HDFC Bank'],['ICICI Bank'],['AXIS Bank'],['Punjab National Bank'],['Kotak Bank']], placeholder: "Please Choose a Bank Name OR Other"%>
+	</div>
+	
+	<div class="col-span-12">
+	    <%= f.button "Pay Now", class: "btn btn-green-success"%>
+	</div>
+	</div>
+	<% end %>
+   </div>
+
+<script type="text/javascript">
+	$('#credit').on('click', function(){
+		window.location.href="/payments/new1";
+	})
+	$('#internet').on('click', function(){
+		window.location.href="/payments/new2";
+	})
+	$('#debitcardpayment').change(function() {
+    if(this.checked) {
+        $('#debit_card').show();
+        $('#credit_card').hide();
+    }
+    });
+     $('#cardpayment').change(function() {
+    if(this.checked) {
+        $('#credit_card').show();
+        $('#debit_card').hide();
+       }
+    });
+</script>
+
+
