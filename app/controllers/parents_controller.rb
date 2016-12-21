@@ -9,7 +9,7 @@ class ParentsController < ApplicationController
   	@parent=Parent.create(parent_params)
   	if @parent.save
   		flash[:success]="Your Parents Details has Created"
-  		redirect_to @parent
+  		redirect_to new_search_path
   	else
   		flash[:alert]="Sorry !! Something gonna Wrong"
   		render 'new'

@@ -10,12 +10,11 @@
 <div class="form-wrappor">
 <%= form_for @search, html: { class: 'form-horizontal', multipart: true } do |v|%>
 	    <div class="field">
-    		<%= v.label :autolyse %>
+    		
     		<%= v.label :autolyse, "Information",:value => "true" %>
     		<%= v.radio_button :autolyse, true, :checked => true %>
     		<%= v.label :autolyse , "Education",:value => "false" %>
     		<%= v.radio_button :autolyse, false, :checked => false, :id => "education" %>
-    		<%= v.label :autolyse %>
     		<%= v.label :autolyse, "Parent",:value => "false" %>
     		<%= v.radio_button :autolyse, true, :checked => false, :id =>"parent" %>
   		</div>

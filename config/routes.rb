@@ -1,12 +1,15 @@
 Rails.application.routes.draw do  
-  get '/orders/subregion_options' => 'orders#subregion_options'
+  get 'payments/index'
+
+  get '/infos/subregion_options' => 'infos#subregion_options'
   resources :infos
   resources :searches
   resources :educations
   resources :esearches
   resources :parents
   resources :psearches
-  root 'searches#new'
+  resources :payments
+  root 'payments#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
