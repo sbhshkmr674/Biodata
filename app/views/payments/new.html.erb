@@ -35,6 +35,7 @@
    <div class="field">
 	   Debit Card Number*
 	   <%= f.text_field :d_card, placeholder: "Enter the Debit Card Number"%>
+	   <%= image_tag "sbi.png"%>
 	</div>
 	<div class="field">
 	    Expiry Date
@@ -58,10 +59,10 @@
 
 <script type="text/javascript">
 	$('#credit').on('click', function(){
-		window.location.href="/payments/new1";
+		window.location.href="/payments/new";
 	})
 	$('#internet').on('click', function(){
-		window.location.href="/payments/new2";
+		window.location.href="/payments/new";
 	})
 	$('#debitcardpayment').change(function() {
     if(this.checked) {
