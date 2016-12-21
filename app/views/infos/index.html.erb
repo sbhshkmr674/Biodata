@@ -15,6 +15,7 @@
                   <th>State</th>
                   <th>Distric</th>
                   <th>Zip Code</th>
+                  <th>Action</th>
               </tr>   
           <% @infos.each do |v| %>
 
@@ -26,10 +27,11 @@
                 <td><%= v.state%></td>
                 <td><%= v.distric%></td>
                 <td><%= v.zip_code%></td>
+
             </tr>
           <% end %>
     </table>      
           <%= link_to "New Biodata", new_info_path%>
-          </center>
-           <%= link_to "10th Details", educations_index_path%>
+          
+           <%= link_to "educations_index_path" %>
           </center>
