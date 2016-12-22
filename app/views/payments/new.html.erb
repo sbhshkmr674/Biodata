@@ -9,6 +9,8 @@
     		<%= f.label :autolyse, "Internet Banking",:value => "false" %>
     		<%= f.radio_button :autolyse, true, :checked => false, :id =>"internet" %>
   		</div>
+  	<h1>Debit Card Payment</h1>
+  	<hr />	
   	<div class="debitcardpayment" id="debit_card">	
 	<div class="field">
 	   Debit Card Number*
@@ -31,11 +33,13 @@
 	    <%= f.button "Pay Now", class: "btn btn-green-success"%>
 	</div>
 </div>
+<h1>Credit Card Payment</h1>
+<hr />
 <div class="cardpayment" id="credit_card">
    <div class="field">
 	   Debit Card Number*
 	   <%= f.text_field :d_card, placeholder: "Enter the Debit Card Number"%>
-	   <%= image_tag "sbi.png"%>
+	   
 	</div>
 	<div class="field">
 	    Expiry Date
@@ -53,6 +57,18 @@
 	<div class="col-span-12">
 	    <%= f.button "Pay Now", class: "btn btn-green-success"%>
 	</div>
+	<h1>Internet Banking</h1>
+	<hr />
+	<div class="field">
+	  Internet Banking
+		<%= image_tag "sbi.png"%>
+		<%= image_tag "hdfc.png"%>
+		<%= image_tag "icici.png"%>
+		<%= image_tag "axis.png"%>
+		<%= image_tag "pnb.png"%>
+		<%= image_tag "kotak.png"%>
+	</div>
+
 	</div>
 	<% end %>
    </div>
