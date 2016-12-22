@@ -8,7 +8,14 @@ class InfosController < ApplicationController
   def new 
   	@info=Info.new
   end
-
+  def destroy
+    @info=Info.find(params[:id])
+    if @info.destroy
+      flash[:success]="You Delete successfully"
+     else
+      flash[:alert]="Sorry ! Something is going to wrong"
+    end
+  end
   def create
   	@info=Info.create(info_params)
 
