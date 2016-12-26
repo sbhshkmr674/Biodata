@@ -61,25 +61,50 @@
 	<hr />
 	<div class="field">
 	  Internet Banking
-		<%= image_tag "sbi.png"%>
-		<%= image_tag "hdfc.png"%>
-		<%= image_tag "icici.png"%>
-		<%= image_tag "axis.png"%>
-		<%= image_tag "pnb.png"%>
-		<%= image_tag "kotak.png"%>
+	  <div id="radio-button-wrapper">
+	  	 <span class="image-radio">
+	  	<%= f.radio_button :sbi , false,:checked => 'false', :id =>"sbi"%>
+		<%= image_tag "SBI.png"%>
+	  </span>
+	   <span class="image-radio">	
+		<%= f.radio_button :hdfc , false,:checked => 'false', :id =>"hdfc"%>
+		<%= image_tag "HDFC.png"%>
+	   </span> 	
+	  <span class="image-radio">
+		<%= f.radio_button :icici , false,:checked => 'false', :id =>"icici"%>
+		<%= image_tag "ICICI.png"%>
+		</span>
+		 <span class="image-radio">
+		<%= f.radio_button :pnb , false,:checked => 'false', :id =>"sbi"%>
+		<%= image_tag "PNB.png" %>
+		</span>
+		 <span class="image-radio">
+		<%= f.radio_button :axis , false,:checked => 'false', :id =>"axis"%>
+		<%= image_tag "Axis.png"%>
+		</span>
+		 <span class="image-radio">
+		<%= f.radio_button :kotak , false,:checked => 'false', :id =>"kotak"%>
+		<%= image_tag "Kotac.png"%>
+		</span>
+		<p>Now with CSS3</p>
+		<div class="cs-selector">
+		 <input checked="checked" type="radio" id="visa" name="credit_card" value="visa" />
+		 <label class="drinkcard-cc visa" for="visa"></label>
+		 <input checked="checked" type="radio" id="mastercard" name="master_card" value="mastercard" />
+		 <label class="drinkcard-cc mastercard" for="mastercard"></label>
+		 </div>
+		 <p>Now a Simple mod:</p>
+		 <div class="cs-selector-2">
+		 <input checked="checked" type="radio" id="visa2" name="credit_card" value="visa" />
+		 <label class="drinkcard-cc visa" for="visa2"></label>
+		 <input checked="checked" type="radio" id="mastercard2" name="master_card" value="mastercard" />
+		 <label class="drinkcard-cc mastercard" for="mastercard2"></label>
 	</div>
-
+			<small>
+				<%= image_tag "SBI.png"%>
+				<%= image_tag "HDFC.png"%>
+			</small>
 	</div>
 	<% end %>
    </div>
-
-<script type="text/javascript">
-	$('#credit').on('click', function(){
-		window.location.href="/payments/new";
-	})
-	$('#internet').on('click', function(){
-		window.location.href="/payments/new";
-	})
-</script>
-
-
+   
